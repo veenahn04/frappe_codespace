@@ -9,7 +9,7 @@ from frappe.utils import get_datetime
 
 class AirplaneFlight(WebsiteGenerator):
     def autoname(self):
-        month_year = get_datetime(self.date).strftime("%m-%Y")
+        month_year = get_datetime(self.date_of_departure).strftime("%m-%Y")
         prefix = f"{self.airplane}-{month_year}-"
         self.name = make_autoname(prefix + ".#####")
 

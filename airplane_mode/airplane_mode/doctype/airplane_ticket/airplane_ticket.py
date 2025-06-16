@@ -11,6 +11,7 @@ from frappe.utils import flt
 class AirplaneTicket(Document):
     def before_insert(self):
         self.allocate_seat()
+        self.validate_flight_capacity()
 
     def allocate_seat(self):
         if not self.seat:
@@ -21,7 +22,12 @@ class AirplaneTicket(Document):
 
     def validate(self):
         self.remove_duplicate_entries_add_ons()
+
+    def before_save(self):
         self.calculate_total_amount()
+
+    def before_submit(self):
+        self.validate_status()
 
     def remove_duplicate_entries_add_ons(self):
         unique_items = set()
@@ -38,7 +44,17 @@ class AirplaneTicket(Document):
         self.total_amount = flt(self.flight_price) + \
             sum(row.amount for row in self.add_ons)
 
-    def on_submit(self):
+    def validate_status(self):
         if self.status != "Boarded":
             frappe.throw(
                 _("The ticket can only be submitted when the status is 'Boarded'."))
+
+    def validate_flight_capacity(self):
+        airplane = frappe.get_value("Airplane Flight", self.flight, 'airplane')
+        airplane_capacity = frappe.get_value("Airplane", airplane, 'capacity')
+        ticket_count = frappe.db.count(
+            "Airplane Ticket", filters={"flight": self.flight})
+
+        if ticket_count >= airplane_capacity:
+            frappe.throw(
+                _("Cannot create ticket. The airplane flight has reached its full capacity of {airplane_capacity} passengers."))

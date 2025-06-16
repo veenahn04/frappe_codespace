@@ -16,11 +16,11 @@
   "destination_airport",
   "destination_airport_code",
   "departure_details_section",
-  "date",
+  "date_of_departure",
   "duration",
   "amended_from",
   "column_break_btup",
-  "time",
+  "time_of_departure",
   "is_published",
   "route"
  ],
@@ -31,20 +31,6 @@
    "in_list_view": 1,
    "label": "Airplane",
    "options": "Airplane",
-   "reqd": 1
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date of Departure",
-   "reqd": 1
-  },
-  {
-   "fieldname": "time",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Time of Departure",
    "reqd": 1
   },
   {
@@ -131,6 +117,20 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "fieldname": "date_of_departure",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Departure",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_of_departure",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time of Departure",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
@@ -144,7 +144,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-06-12 17:34:28.372607",
+ "modified": "2025-06-13 17:36:14.949845",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
@@ -161,6 +161,48 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1
   }
  ],
  "route": "flights",
