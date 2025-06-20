@@ -8,7 +8,9 @@
  "field_order": [
   "code",
   "city",
-  "country"
+  "country",
+  "column_break_wmlw",
+  "location"
  ],
  "fields": [
   {
@@ -31,12 +33,21 @@
    "in_list_view": 1,
    "label": "Country",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wmlw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-13 17:26:19.746238",
+ "modified": "2025-06-18 22:19:12.107252",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airport",

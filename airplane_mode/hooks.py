@@ -20,6 +20,14 @@ app_license = "mit"
 # 		"has_permission": "airplane_mode.api.permission.has_app_permission"
 # 	}
 # ]
+fixtures = [
+    {
+        "doctype": "Shop Type",
+        "filters": {
+            "shop_type": ["in", ["Stall", "Walk-through", "Normal"]]
+        }
+    }
+]
 
 # Includes in <head>
 # ------------------
@@ -147,6 +155,11 @@ app_license = "mit"
 
 # Scheduled Tasks
 # ---------------
+scheduler_events = {
+    "monthly": [
+        "airplane_mode.airport_shop_management.doctype.shop_rent_payment.utils.send_rent_due_reminders"
+    ]
+}
 
 # scheduler_events = {
 # 	"all": [

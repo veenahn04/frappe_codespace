@@ -9,6 +9,7 @@
   "airplane",
   "column_break_irsc",
   "status",
+  "gate_number",
   "airport_details_section",
   "source_airport",
   "source_airport_code",
@@ -22,7 +23,9 @@
   "column_break_btup",
   "time_of_departure",
   "is_published",
-  "route"
+  "route",
+  "section_break_bxdd",
+  "airplane_crew_member"
  ],
  "fields": [
   {
@@ -131,6 +134,24 @@
    "in_list_view": 1,
    "label": "Time of Departure",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_bxdd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "airplane_crew_member",
+   "fieldtype": "Table",
+   "label": "Airplane Crew Member",
+   "options": "Crew Member Assignment"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "gate_number",
+   "fieldtype": "Int",
+   "label": "gate_number",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
@@ -144,7 +165,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-06-13 17:36:14.949845",
+ "modified": "2025-06-20 16:37:21.609556",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

@@ -1,0 +1,22 @@
+
+<!-- <h1>{{ title }}</h1> -->
+ <head>
+<link rel="stylesheet" href="/assets/airplane_mode/scss/common.css">
+
+  <title>{{ doc.shop_name }}</title>
+</head>
+<body class="shop-detail-container">
+  <div class="shop-card">
+     <h1>{{ doc.shop_number }}</h1>
+    <h1>{{ doc.shop_name }}</h1>
+
+    <p><strong>Type:</strong> {{ doc.shop_type }}</p>
+    <p><strong>Location:</strong> {{ doc.location or "Not specified" }}</p>
+    <p><strong>Size (sqft):</strong> {{ doc.area_sq_ft }}</p>
+    <p><strong>Rent Amount:</strong> ₹{{ doc.rent_amount or "N/A" }}</p>
+
+   <a href="/shop-lead-form?shop={{ doc.name }}" class="btn btn-primary">
+  I'm Interested in Renting This Shop
+</a>
+  </div>
+</body>

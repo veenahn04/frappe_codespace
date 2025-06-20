@@ -8,6 +8,7 @@
  "field_order": [
   "passenger",
   "status",
+  "gate_number",
   "column_break_r8pq",
   "flight",
   "seat",
@@ -163,13 +164,21 @@
    "fieldname": "column_break_epiw",
    "fieldtype": "Column Break",
    "read_only": 1
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Int",
+   "label": "Gate Number",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-13 17:37:53.832560",
+ "modified": "2025-06-16 12:45:12.860216",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
