@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-06-19 21:19:35.746148",
+ "modified": "2025-06-25 16:07:44.459611",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "shop-lead-form",
@@ -104,8 +104,21 @@
    "max_value": 0,
    "options": "Airport Shop",
    "precision": "",
-   "read_only": 0,
+   "read_only": 1,
    "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "hidden": 0,
+   "label": "Rent Amount",
+   "max_length": 0,
+   "max_value": 0,
+   "precision": "",
+   "read_only": 1,
+   "reqd": 0,
    "show_in_filter": 0
   }
  ]

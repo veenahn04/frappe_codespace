@@ -6,7 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "default_rent_amount",
-  "send_rent_reminders"
+  "enabledisable_rent_reminders"
  ],
  "fields": [
   {
@@ -16,16 +16,16 @@
   },
   {
    "default": "0",
-   "fieldname": "send_rent_reminders",
+   "fieldname": "enabledisable_rent_reminders",
    "fieldtype": "Check",
-   "label": "Send Rent Reminders"
+   "label": "enable/disable rent reminders"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-06-18 22:15:30.355895",
+ "modified": "2025-06-25 15:45:35.322276",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop Settings",

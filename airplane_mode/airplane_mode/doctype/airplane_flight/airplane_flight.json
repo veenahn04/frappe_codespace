@@ -142,7 +142,7 @@
   {
    "fieldname": "airplane_crew_member",
    "fieldtype": "Table",
-   "label": "Airplane Crew Member",
+   "label": "Airplane Crew Member Assignment",
    "options": "Crew Member Assignment"
   },
   {
@@ -165,7 +165,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-06-20 16:37:21.609556",
+ "modified": "2025-06-23 11:49:49.703698",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

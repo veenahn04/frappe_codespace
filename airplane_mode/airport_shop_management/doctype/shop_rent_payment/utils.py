@@ -3,9 +3,9 @@ import frappe
 
 @frappe.whitelist()
 def send_rent_due_reminders():
-    settings = frappe.get_single("Airport Shop Settings")
+    settings = frappe.get_single("Shop Settings")
     
-    if not settings.enable_rent_reminders:
+    if not settings.enabledisable_rent_reminders:
         return
     
     contracts = frappe.get_all(
@@ -29,3 +29,9 @@ def send_rent_due_reminders():
                     <p>Thank you for your cooperation.</p>
                 """
             )
+
+def update_payment_statuses():
+    today = frappe.utils.nowdate()
+    payments = frappe.get_all("Shop Rent Payment", filters={"status": "Pending", "due_date": ["<", today]})
+    for p in payments:
+        frappe.db.set_value("SHop Rent Payment", p.name, "status", "Overdue")

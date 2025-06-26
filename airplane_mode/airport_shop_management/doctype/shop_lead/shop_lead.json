@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "SL.#####",
  "creation": "2025-06-19 21:13:25.739298",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,7 +11,8 @@
   "comments",
   "column_break_ughq",
   "email",
-  "shop"
+  "shop",
+  "rent_amount"
  ],
  "fields": [
   {
@@ -48,15 +50,23 @@
    "label": "Shop",
    "options": "Airport Shop",
    "reqd": 1
+  },
+  {
+   "fetch_from": "shop.rent_amount",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-19 21:16:02.203385",
+ "modified": "2025-06-25 16:49:14.703847",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop Lead",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

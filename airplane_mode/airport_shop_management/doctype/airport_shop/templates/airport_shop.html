@@ -15,7 +15,7 @@
     <p><strong>Size (sqft):</strong> {{ doc.area_sq_ft }}</p>
     <p><strong>Rent Amount:</strong> ₹{{ doc.rent_amount or "N/A" }}</p>
 
-   <a href="/shop-lead-form?shop={{ doc.name }}" class="btn btn-primary">
+   <a href="/shop-lead-form/new?shop={{ doc.name }}&rent_amount={{ doc.rent_amount}}" class="btn btn-primary">
   I'm Interested in Renting This Shop
 </a>
   </div>

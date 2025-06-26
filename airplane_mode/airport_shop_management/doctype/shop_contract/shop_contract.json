@@ -10,6 +10,7 @@
   "tenant",
   "shop",
   "rent_amount",
+  "deposit_amount",
   "column_break_xc0q",
   "status",
   "contract_start_date",
@@ -80,13 +81,18 @@
    "fieldtype": "Data",
    "label": "Title",
    "unique": 1
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-18 22:23:03.207614",
+ "modified": "2025-06-25 20:55:35.733996",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop Contract",

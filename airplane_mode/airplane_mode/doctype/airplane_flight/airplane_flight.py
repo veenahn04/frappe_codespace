@@ -22,11 +22,11 @@ class AirplaneFlight(WebsiteGenerator):
     # validate Utils
     def check_crew_conflicts(self):
         # to check crew member already active or not by date of departure date
-        if not self.date_of_departure or not self.flight_crew_assignments:
+        if not self.date_of_departure or not self.airplane_crew_member:
             return
 
         assigned_crew = [
-            row.crew_member for row in self.flight_crew_assignments if row.crew_member]
+            row.crew_member for row in self.airplane_crew_member if row.crew_member]
         if not assigned_crew:
             return
 
@@ -43,7 +43,7 @@ class AirplaneFlight(WebsiteGenerator):
             return
 
         conflicting_assignments = frappe.get_all(
-            "Flight Crew Assignment",
+            "Crew Member Assignment",
             filters={
                 "parent": ["in", other_flights],
                 "crew_member": ["in", assigned_crew]

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "CREW-.#####",
  "creation": "2025-06-16 12:08:18.209270",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -27,10 +28,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-20 16:52:41.994393",
+ "modified": "2025-06-20 16:58:12.040442",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Crew Member",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "Shop-.#####",
  "creation": "2025-06-17 17:24:09.879719",
@@ -9,6 +10,7 @@
   "shop_number",
   "shop_name",
   "shop_type",
+  "current_contract",
   "column_break_ymxs",
   "airport",
   "area_sq_ft",
@@ -37,9 +39,11 @@
   },
   {
    "default": "0",
+   "fetch_from": "current_contract.rent_amount",
    "fieldname": "rent_amount",
    "fieldtype": "Currency",
    "label": "Rent Amount",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -69,9 +73,11 @@
    "fieldtype": "Section Break"
   },
   {
+   "fetch_from": "current_contract.deposit_amount",
    "fieldname": "deposit_amount",
    "fieldtype": "Currency",
    "label": "Deposit Amount",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -94,6 +100,12 @@
    "fieldtype": "Link",
    "label": "Shop Type",
    "options": "Shop Type"
+  },
+  {
+   "fieldname": "current_contract",
+   "fieldtype": "Link",
+   "label": "Current Contract",
+   "options": "Shop Contract"
   }
  ],
  "grid_page_length": 50,
@@ -101,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-06-19 21:02:55.053583",
+ "modified": "2025-06-26 14:22:28.183244",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Airport Shop",
